@@ -44,8 +44,8 @@ class DeviceUtils {
   }
 
 //get screen width
-  static double getScreenWidth(BuildContext context) {
-    return MediaQuery.of(context).size.width;
+  static double getScreenWidth() {
+    return MediaQuery.of(Get.context!).size.width;
   }
 
   //get pixer ratio

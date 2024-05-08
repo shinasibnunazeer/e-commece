@@ -26,7 +26,7 @@ class EElevatedButtonTeme {
     style: ElevatedButton.styleFrom(
         elevation: 0,
         foregroundColor: Colors.white,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.blue[600],
         disabledBackgroundColor: Colors.grey,
         disabledForegroundColor: Colors.grey,
         side: const BorderSide(
