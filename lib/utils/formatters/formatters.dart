@@ -46,28 +46,28 @@ class Formatter {
 
   //format email
   String formatEmail(String email) {
-    return email.length > 20 ? email.substring(0, 20) + '...' : email;
+    return email.length > 20 ? '${email.substring(0, 20)}...' : email;
   }
 
   //format text
   String formatText(String text) {
-    return text.length > 20 ? text.substring(0, 20) + '...' : text;
+    return text.length > 20 ? '${text.substring(0, 20)}...' : text;
   }
 
   //format text
   String formatTextWithEllipsis(String text, int length) {
-    return text.length > length ? text.substring(0, length) + '...' : text;
+    return text.length > length ? '${text.substring(0, length)}...' : text;
   }
 
   //format text
   String formatTextWithEllipsisAndLength(String text, int length) {
-    return text.length > length ? text.substring(0, length) + '...' : text;
+    return text.length > length ? '${text.substring(0, length)}...' : text;
   }
 
   //format text
   String formatTextWithEllipsisAndLengthAndStart(String text, int length) {
     return text.length > length
-        ? '...' + text.substring(text.length - length, text.length)
+        ? '...${text.substring(text.length - length, text.length)}'
         : text;
   }
 
@@ -75,9 +75,7 @@ class Formatter {
   String formatTextWithEllipsisAndLengthAndStartAndEnd(
       String text, int length) {
     return text.length > length
-        ? '...' +
-            text.substring(text.length - length, text.length) +
-            '...'
+        ? '...${text.substring(text.length - length, text.length)}...'
         : text;}
 
 
