@@ -7,7 +7,6 @@ import 'package:e_commerce/utils/const/text.dart';
 import 'package:e_commerce/utils/device/device_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
