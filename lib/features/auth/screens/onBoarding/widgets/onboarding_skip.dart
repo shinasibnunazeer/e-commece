@@ -14,7 +14,7 @@ class OnBoardingSkip extends StatelessWidget {
   Widget build(BuildContext context) {
   
     return Positioned(
-      top: DeviceUtils.getAppBarHeight(context),
+      top: DeviceUtils.getAppBarHeight(),
       right: 8.0,
       child: TextButton(
       onPressed: ()

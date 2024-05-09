@@ -1,4 +1,5 @@
 import 'package:e_commerce/features/auth/controllers/onboarding_controller.dart';
+import 'package:e_commerce/features/auth/screens/onBoarding/widgets/on_boarding_next_button.dart';
 import 'package:e_commerce/features/auth/screens/onBoarding/widgets/onboarding_indicator.dart';
 import 'package:e_commerce/features/auth/screens/onBoarding/widgets/onboarding_page.dart';
 import 'package:e_commerce/features/auth/screens/onBoarding/widgets/onboarding_skip.dart';
@@ -17,51 +18,34 @@ class OnBoardingScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-           Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: PageView(
-        controller: controller.pageController,
-        onPageChanged: controller.updateIndex,
-        children: const [
-          OnBoardingPage(
-            image: EImageString.onBoardingImage1,
-            title: EText.onBoadingTitle1,
-            subtitle: EText.onboardingSubTitle,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: PageView(
+              controller: controller.pageController,
+              onPageChanged: controller.updateIndex,
+              children: const [
+                OnBoardingPage(
+                  image: EImageString.onBoardingImage1,
+                  title: EText.onBoadingTitle1,
+                  subtitle: EText.onboardingSubTitle,
+                ),
+                OnBoardingPage(
+                  image: EImageString.onBoardingImage2,
+                  title: EText.onBoadingTitle2,
+                  subtitle: EText.onboardingSubTitle2,
+                ),
+                OnBoardingPage(
+                    image: EImageString.onBoardingImage3,
+                    title: EText.onBoadingTitle3,
+                    subtitle: EText.onBoadingTitle3)
+              ],
+            ),
           ),
-          OnBoardingPage(
-            image: EImageString.onBoardingImage2,
-            title: EText.onBoadingTitle2,
-            subtitle: EText.onboardingSubTitle2,
-          ),
-          OnBoardingPage(
-              image: EImageString.onBoardingImage3,
-              title: EText.onBoadingTitle3,
-              subtitle: EText.onBoadingTitle3)
-        ],
-      ),
-    ),
           const OnBoardingSkip(),
           const OnBoardingIndicator(),
-      
-       Obx(
-         () => controller.currentIndex.value == 2 ? Positioned(
-              bottom: DeviceUtils.getNavigationBarHeight(context),
-              right: 24,
-              child: ElevatedButton(
-                onPressed: () {},
-                //circle button
-                style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(),
-                 
-                 
-                ),
-                child: const Icon(Icons.arrow_right),
-              ),
-            ):  Container()
-       ) 
+          const OnBoardingNextButton()
         ],
       ),
     );
   }
-
 }
