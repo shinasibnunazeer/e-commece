@@ -121,6 +121,14 @@ class DeviceUtils {
     }
   }
 
+//check dark mide
+  static bool  darkMode (context) {
+  
+    return Theme.of(context).brightness == Brightness.dark;
+  }
+
+
+
 //BOOL IS IOS
   static bool isIOS() {
     return defaultTargetPlatform == TargetPlatform.iOS;

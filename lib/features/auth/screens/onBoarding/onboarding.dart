@@ -42,21 +42,23 @@ class OnBoardingScreen extends StatelessWidget {
     ),
           const OnBoardingSkip(),
           const OnBoardingIndicator(),
-       controller.currentIndex.value == 2 ?
-       Positioned(
-            bottom: DeviceUtils.getNavigationBarHeight(context),
-            right: 24,
-            child: ElevatedButton(
-              onPressed: () {},
-              //circle button
-              style: ElevatedButton.styleFrom(
-                shape: const CircleBorder(),
-               
-               
+      
+       Obx(
+         () => controller.currentIndex.value == 2 ? Positioned(
+              bottom: DeviceUtils.getNavigationBarHeight(context),
+              right: 24,
+              child: ElevatedButton(
+                onPressed: () {},
+                //circle button
+                style: ElevatedButton.styleFrom(
+                  shape: const CircleBorder(),
+                 
+                 
+                ),
+                child: const Icon(Icons.arrow_right),
               ),
-              child: const Icon(Icons.arrow_right),
-            ),
-          ) : Container()
+            ):  Container()
+       ) 
         ],
       ),
     );
