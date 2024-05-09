@@ -24,8 +24,8 @@ class OnboardingController extends GetxController{
     Get.to(() => const LoginScreen());
     
 // print("nfjngif");
-    // currentIndex.value = 2;
-    // print(currentIndex.value);
-    // pageController.jumpToPage(2);
+    currentIndex.value = 2;
+
+    pageController.jumpToPage(2);
   }
 }

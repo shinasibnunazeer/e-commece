@@ -2,6 +2,7 @@
 
 
 import 'package:e_commerce/features/auth/screens/onBoarding/onboarding.dart';
+import 'package:e_commerce/features/auth/screens/signup/signup.dart';
 import 'package:e_commerce/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

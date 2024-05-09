@@ -3,7 +3,9 @@ import 'package:e_commerce/features/auth/screens/login/widgets/form_widget.dart'
 import 'package:e_commerce/features/auth/screens/login/widgets/google_button.dart';
 import 'package:e_commerce/features/auth/screens/login/widgets/login_header.dart';
 import 'package:e_commerce/common/widgets/login/form_divider.dart';
+import 'package:e_commerce/features/auth/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -26,14 +28,16 @@ class LoginScreen extends StatelessWidget {
               children: [
                 const Text("Don't have an account?"),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(const SignupScreen());
+                  },
                   child: const Text("Sign up"),
                 )
               ],
             ),
             //or
             const SizedBox(height: 16),
-            const FormDivider(text: "or",),
+            const EFormDivider(text: "or",),
             const SizedBox(height: 8),
             const GoogleButton()
           ],

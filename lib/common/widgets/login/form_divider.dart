@@ -3,8 +3,8 @@
 
 import 'package:flutter/material.dart';
 
-class FormDivider extends StatelessWidget {
-  const FormDivider({
+class EFormDivider extends StatelessWidget {
+  const EFormDivider({
     super.key, required this.text,
   });
 final String text;
